@@ -1,0 +1,89 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "@tanstack/query-devtools",
+      "version": "5.0.0-alpha.88",
+      "description": "Developer tools to interact with and visualize the TanStack Query cache",
+      "author": "tannerlinsley",
+      "license": "MIT",
+      "repository": "tanstack/query",
+      "homepage": "https://tanstack.com/query",
+      "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/tannerlinsley"
+      },
+      "type": "module",
+      "main": "./build/index.cjs",
+      "module": "./build/index.js",
+      "types": "./build/index.d.ts",
+      "browser": {},
+      "exports": {
+        "solid": {
+          "development": "./build/dev.jsx",
+          "import": "./build/index.jsx"
+        },
+        "development": {
+          "import": {
+            "types": "./build/index.d.ts",
+            "default": "./build/dev.js"
+          },
+          "require": "./build/dev.cjs"
+        },
+        "import": {
+          "types": "./build/index.d.ts",
+          "default": "./build/index.js"
+        },
+        "require": "./build/index.cjs"
+      },
+      "scripts": {
+        "clean": "rimraf ./build && rimraf ./coverage",
+        "test:eslint": "eslint --ext .ts,.tsx ./src",
+        "test:types": "tsc",
+        "test:lib": "vitest run --coverage",
+        "test:lib:dev": "pnpm run test:lib --watch",
+        "test:build": "publint --strict",
+        "build": "tsup"
+      },
+      "files": [
+        "build",
+        "src"
+      ],
+      "devDependencies": {
+        "@emotion/css": "^11.11.0",
+        "@solid-primitives/keyed": "^1.2.0",
+        "@solid-primitives/resize-observer": "^2.0.18",
+        "@solid-primitives/storage": "^1.3.11",
+        "@tanstack/match-sorter-utils": "^8.8.4",
+        "@tanstack/query-core": "workspace:*",
+        "solid-js": "^1.6.13",
+        "solid-transition-group": "^0.2.2",
+        "superjson": "^1.12.4",
+        "tsup-preset-solid": "^2.0.1",
+        "vite-plugin-solid": "^2.5.0"
+      }
+    },
+    "prefix": "/Users/aryandeora/Desktop/test"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/Users/aryandeora/Library/pnpm/store/v3",
+    "virtualStoreDir": "/Users/aryandeora/Desktop/test/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/Users/aryandeora/Desktop/test",
+    "stage": "resolution_started"
+  },
+  "4 error pnpm": {
+    "code": "ERR_PNPM_NO_MATCHING_VERSION_INSIDE_WORKSPACE",
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "In : No matching version found for @tanstack/query-core@* inside the workspace",
+      "code": "ERR_PNPM_NO_MATCHING_VERSION_INSIDE_WORKSPACE",
+      "stack": "pnpm: In : No matching version found for @tanstack/query-core@* inside the workspace\n    at tryResolveFromWorkspace (/Users/aryandeora/.cache/node/corepack/pnpm/7.1.2/dist/pnpm.cjs:84701:15)\n    at resolveNpm (/Users/aryandeora/.cache/node/corepack/pnpm/7.1.2/dist/pnpm.cjs:84593:39)\n    at Object.resolve (/Users/aryandeora/.cache/node/corepack/pnpm/7.1.2/dist/pnpm.cjs:84823:34)\n    at ctx.requestsQueue.add.priority (/Users/aryandeora/.cache/node/corepack/pnpm/7.1.2/dist/pnpm.cjs:91520:75)\n    at run (/Users/aryandeora/.cache/node/corepack/pnpm/7.1.2/dist/pnpm.cjs:91281:90)\n    at PQueue._tryToStartAnother (/Users/aryandeora/.cache/node/corepack/pnpm/7.1.2/dist/pnpm.cjs:91235:13)\n    at /Users/aryandeora/.cache/node/corepack/pnpm/7.1.2/dist/pnpm.cjs:91294:16\n    at new Promise (<anonymous>)\n    at PQueue.add (/Users/aryandeora/.cache/node/corepack/pnpm/7.1.2/dist/pnpm.cjs:91276:16)\n    at resolveAndFetch (/Users/aryandeora/.cache/node/corepack/pnpm/7.1.2/dist/pnpm.cjs:91520:55)"
+    }
+  }
+}
